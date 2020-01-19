@@ -1,15 +1,21 @@
 package com.tc.domain;
 
+import java.util.Date;
+
 public class userDO {
 
     private String name;
     private Integer age;
+
+
+    private Date date;
 
     @Override
     public String toString() {
         return "userDO{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
+                ", date=" + date +
                 '}';
     }
 
@@ -27,5 +33,13 @@ public class userDO {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

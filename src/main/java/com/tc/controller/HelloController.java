@@ -2,6 +2,7 @@ package com.tc.controller;
 
 
 import com.tc.domain.Account;
+import com.tc.domain.userDO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  */
 @Controller
+@RequestMapping("param")
 public class HelloController {
 
 
@@ -32,6 +34,19 @@ public class HelloController {
 
         System.out.println("测试程序 hello springmvc");
         System.out.println(account.toString());
+        return  "success";
+    }
+
+    /***
+     * 自定义类型转换器
+     * @param userDO
+     * @return
+     */
+    @RequestMapping("/saveUser")
+    public String saveUser(userDO userDO){
+
+        System.out.println("测试程序 hello springmvc");
+       System.out.println(userDO.toString());
         return  "success";
     }
 }
