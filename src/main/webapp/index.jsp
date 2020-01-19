@@ -30,5 +30,8 @@
     客户生日：<input type="text" name="date"/><br>
     <input type="submit" value="提交"/><br>
 </form>
+
+
+   <a href="param/servlet?name=zhangsan">servlet原生的api</a>
 </body>
 </html>
